@@ -33,7 +33,7 @@
 
 body {
     height: 100vh;
-    background-image: url(/Zuri-images/hero-bg.svg);
+    background-image: url("../Zuri-images/hero-bg.svg");
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -106,8 +106,8 @@ section[second] {
     justify-content: center;
     height: 100vh;
     font-family: var(--font-family-sans-serif);
-    /* background-color: rgba(0, 123, 255, .3); */
-    background: url(./Zuri-images/left_bvmv7q.png) left no-repeat, url(../Zuri-images/right_yz6hn3.png) right no-repeat;
+
+    background: url("./Zuri-images/left_bvmv7q.png") left no-repeat, url("/Zuri-images/right_yz6hn3.png") right no-repeat;
     background-size: 22em, 22em;
 }
 
