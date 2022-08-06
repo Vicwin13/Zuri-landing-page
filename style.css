@@ -1,0 +1,236 @@
+:root {
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-image: url(/Zuri-images/hero-bg.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+section.landing-container {
+
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-evenly; */
+    text-align: center;
+    margin-top: 7em;
+    height: 100vh;
+    font-family: var(--font-family-sans-serif);
+
+}
+
+div.other-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding-top: 6rem;
+}
+
+.landing-text p span {
+    color: var(--danger);
+}
+
+.landing-text h1 {
+    padding: 1em;
+    color: var(--gray-dark);
+    font-size: 2.3em;
+}
+
+.landing-text p {
+    color: var(--dark);
+}
+
+div.other-links a {
+    text-decoration: none;
+    border: 2px solid var(--danger);
+    padding: 1em 1.5em;
+}
+
+div.other-links .link1 a {
+    color: var(--white);
+    background-color: var(--danger);
+}
+
+div.other-links .link1 a:hover {
+    color: var(--red);
+    background-color: var(--white);
+}
+
+div.other-links .link2 a {
+    color: var(--red);
+    background-color: var(--white);
+}
+
+div.other-links .link2 a:hover {
+    color: var(--white);
+    background-color: var(--red);
+}
+
+section[second] {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: var(--font-family-sans-serif);
+    /* background-color: rgba(0, 123, 255, .3); */
+    background: url(/Zuri-images/left_bvmv7q.png) left no-repeat, url(/Zuri-images/right_yz6hn3.png) right no-repeat;
+    background-size: 22em, 22em;
+}
+
+div.box-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 3rem;
+    align-items: center;
+
+}
+
+div.box-container .boxes {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #FFFAFA;
+    width: 23em;
+    text-align: left;
+    padding: 1.5em;
+    height: max-content;
+
+}
+
+.boxes p {
+    line-height: 1.6em;
+    color: var(--gray-dark);
+    padding: 1em;
+}
+
+
+div.box-container .boxes a {
+    text-decoration: none;
+    color: var(--danger);
+    padding: 1em 1em 2em 1em;
+
+}
+
+.zuri-logos img {
+    padding: 1em;
+}
+
+footer section {
+    display: flex;
+    justify-content: space-around;
+}
+
+div.link {
+    padding: 2em 0;
+}
+
+p[top-text] {
+    color: var(--danger);
+}
+
+p[bottom-text] {
+    font-size: 2.3em;
+    color: var(--gray-dark);
+    padding-top: 1em;
+}
+
+footer {
+    height: 40vh;
+}
+
+footer section {
+    margin-top: 6em;
+    height: 100%;
+    font-family: var(--font-family-sans-serif);
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    color: var(--gray-dark);
+
+}
+
+hr {
+    border: 1px solid var(--gray-dark);
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.links ul li {
+    list-style: none;
+    color: var(--danger);
+}
+
+.soc-container {
+    text-align: center;
+}
+
+.soc-container h3 {
+    margin-bottom: .3em;
+
+}
+
+.soc-container .social a img {
+    width: 20px;
+    /* padding: 20px; */
+}
+
+.soc-container .social a {
+    padding: 10px 5px;
+    margin-top: .5em;
+}
+
+p[mail] a {
+    text-decoration: none;
+
+    color: var(--danger);
+}
+
+p[mail] {
+    padding-top: 10px;
+}
+
+div[last] {
+    text-align: center;
+    color: var(--gray-dark);
+    text-transform: uppercase;
+    font-family: var(--font-family-sans-serif);
+    font-weight: bolder;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    height: 10vh;
+}
