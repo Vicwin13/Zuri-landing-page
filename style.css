@@ -31,11 +31,8 @@
     box-sizing: border-box;
 }
 
-body {
-    height: 100vh;
-    background-image: url("./Zuri-images/hero-bg.svg");
-    background-size: cover;
-    background-repeat: no-repeat;
+main {
+    min-height: auto;
 }
 
 section.landing-container {
@@ -44,9 +41,13 @@ section.landing-container {
     flex-direction: column;
     /* justify-content: space-evenly; */
     text-align: center;
-    margin-top: 7em;
+    padding-top: 7em;
     height: 100vh;
-    font-family: var(--font-family-sans-serif);
+    font-family: Averta, sans-serif;
+    height: 100vh;
+    background-image: url("./Zuri-images/hero-bg.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
 
 }
 
@@ -106,7 +107,7 @@ section[second] {
     justify-content: center;
     height: 100vh;
     font-family: var(--font-family-sans-serif);
-
+    padding-top: 5em;
     background: url("./Zuri-images/left_bvmv7q.png") left no-repeat, url("./Zuri-images/left_bvmv7q.png") right no-repeat;
     background-size: 22em, 22em;
 }
@@ -170,11 +171,14 @@ p[bottom-text] {
 }
 
 footer {
-    height: 40vh;
+    height: 50vh;
+    margin-top: 5em;
+
+
 }
 
 footer section {
-    margin-top: 6em;
+
     height: 100%;
     font-family: var(--font-family-sans-serif);
     display: flex;
@@ -211,7 +215,7 @@ hr {
 
 .soc-container .social a {
     padding: 10px 5px;
-    margin-top: .5em;
+    padding-top: .5em;
 }
 
 p[mail] a {
@@ -233,4 +237,76 @@ div[last] {
     margin-top: 2rem;
     margin-bottom: 4rem;
     height: 10vh;
+}
+
+@media screen and (max-width: 970px) {
+
+    main .landing-container {
+        height: 100vh;
+        display: block;
+    }
+
+    section[second] {
+        height: auto;
+        display: block;
+        padding-top: 10em;
+
+    }
+
+    div.box-container {
+        width: 90%;
+        display: block;
+        margin: 0 auto;
+    }
+
+    div.box-container .boxes {
+        display: flex;
+        margin-top: 2em;
+        min-width: 100%;
+
+    }
+
+    .boxes {
+        width: 100%;
+    }
+
+
+}
+
+@media screen and (max-width: 768px) {
+
+    footer section {
+        flex-direction: column;
+        align-items: center;
+        gap: 2em;
+        text-align: center;
+        height: auto;
+
+    }
+
+    div.other-links {
+        flex-direction: column;
+        gap: 2em;
+    }
+
+    div.other-links .link2 {
+        margin-top: 1em;
+    }
+
+    .landing-text p {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    p[bottom-text] {
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (max-width: 375) {
+    main {
+        width: 100%;
+    }
+
+
 }
