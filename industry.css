@@ -2,10 +2,10 @@
     --blue: #007bff;
     --indigo: #6610f2;
     --purple: #6f42c1;
-    --pink: #e83e8c;
+    --pink: #f8e6e4;
     --red: #dc3545;
     --orange: #fd7e14;
-    --yellow: #ffc107;
+    --yellow: #FDE6B8;
     --green: #28a745;
     --teal: #20c997;
     --cyan: #17a2b8;
@@ -105,7 +105,7 @@ main {
     display: flex;
     justify-content: space-around;
     align-items: center;
-
+    flex-flow: row wrap;
     height: 100vh;
 
 }
@@ -143,6 +143,7 @@ span {
 .countries {
     display: flex;
     align-items: center;
+    flex-flow: row wrap;
     height: 100vh;
     justify-content: space-around;
     background: url(./Zuri-images/bgsection2.png);
@@ -151,4 +152,192 @@ span {
 
 .people-network img {
     width: 25rem;
+}
+
+.country-container h1 {
+    font-size: 2.5rem;
+    width: 35rem;
+    color: var(--gray-dark);
+}
+
+.population {
+    font-weight: bolder;
+    font-size: larger;
+    color: var(--gray-dark);
+    padding: .5rem 0;
+}
+
+.light-text {
+    color: var(--secondary);
+    font-size: larger;
+    padding: 0 0 .5rem;
+}
+
+.flags img:nth-child(1) {
+    background-color: var(--white);
+    padding: .8rem;
+    width: 4rem;
+    border-radius: 8px;
+}
+
+.flags img:nth-child(2) {
+    background-color: var(--white);
+    padding: .8rem;
+    width: 3.85rem;
+    border-radius: 8px;
+}
+
+.flags img:nth-child(3) {
+    background-color: var(--white);
+    padding: .8rem;
+    width: 3.5rem;
+    border-radius: 8px;
+
+}
+
+.flags img:nth-child(4) {
+    background-color: var(--white);
+    padding: .8rem;
+    width: 3.6rem;
+    border-radius: 8px;
+
+}
+
+.flags img:nth-child(5) {
+    background-color: var(--white);
+    padding: .8rem;
+    width: 3.3rem;
+    border-radius: 8px;
+
+}
+
+.skills-container {
+    height: 100vh;
+    padding: 5em;
+    background: url(./Zuri-images/line1.svg) no-repeat;
+    background-position: 100% 29%;
+}
+
+.skills-container h1:nth-child(1) {
+    font-size: 2.5rem;
+    color: var(--gray-dark);
+    padding-bottom: 2rem;
+    width: 33rem;
+}
+
+.skills-container h1:nth-child(3) {
+    font-size: 2.5rem;
+    color: var(--gray-dark);
+    padding: 2rem 0;
+
+}
+
+.skill-box-container {
+
+    display: flex;
+    gap: 1rem;
+    flex-flow: row wrap;
+}
+
+.skill-box-container div {
+    background-color: var(--white);
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    box-shadow: 5px 5px 40px -12px var(--secondary);
+    font-size: larger;
+    color: var(--secondary);
+}
+
+.skill-box-container div:hover {
+    transform: translateY(-.8rem);
+    transition: transform .3s ease-in-out;
+}
+
+.main-three {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url(./Zuri-images/rope.svg) no-repeat;
+    background-position: 0% 50%;
+    background-size: 34%;
+
+    background-color: var(--yellow);
+}
+
+.main-three h1 {
+
+    font-size: 2.5rem;
+    padding: 2rem;
+}
+
+.cards-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.cards {
+    background-color: white;
+    padding: 2.3rem;
+    text-align: center;
+    width: 22rem;
+    height: auto;
+    border-radius: 0 0 15px 0;
+}
+
+.cards img {
+    padding: 1rem 0;
+}
+
+.cards:hover {
+    background-color: black;
+    color: var(--white);
+
+}
+
+.cards p {
+    padding-top: 1rem;
+}
+
+#shift {
+    padding: 4rem;
+
+}
+
+footer {
+    background-color: var(--dark);
+    padding: 2rem;
+    color: var(--white);
+    text-align: center;
+}
+
+.logo-links {
+    display: flex;
+    align-items: center;
+    padding: 3rem 0;
+    justify-content: space-between;
+}
+
+.social-links img {
+    width: 3rem;
+
+    padding: .5rem;
+}
+
+.social-links a {
+    text-decoration: none;
+
+}
+
+.copyright {
+    display: flex;
+    justify-content: space-between;
+    padding: 0rem 0 2rem 0;
+}
+
+.copyright p a {
+    text-decoration: none;
+    color: var(--white);
 }
