@@ -38,19 +38,35 @@ body {
 
 nav {
     display: flex;
-    justify-content: space-around;
-    padding: .5rem;
+    justify-content: space-between;
+    padding: 1rem 7em 0;
     align-items: center;
+    background-color: var(--white);
+    position: fixed;
+    width: 100%;
+    margin: 0 auto;
+
+
 }
 
 .menu ul li {
     list-style: none;
+    padding: 1rem;
+}
+
+.menu ul li:hover {
+    background-color: whitesmoke;
+}
+
+.menu ul li:active {
+    border-bottom: 3px solid var(--danger);
 }
 
 .menu ul li a {
     text-decoration: none;
     color: var(--gray-dark);
     font-size: larger;
+
 }
 
 .menu ul {
@@ -105,8 +121,9 @@ main {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    flex-flow: row wrap;
     height: 100vh;
+    background: url(./Zuri-images/line1.svg) no-repeat right fixed;
+    background-size: 12rem;
 
 }
 
@@ -143,7 +160,7 @@ span {
 .countries {
     display: flex;
     align-items: center;
-    flex-flow: row wrap;
+
     height: 100vh;
     justify-content: space-around;
     background: url(./Zuri-images/bgsection2.png);
@@ -151,7 +168,7 @@ span {
 }
 
 .people-network img {
-    width: 25rem;
+    width: 28rem;
 }
 
 .country-container h1 {
@@ -212,7 +229,7 @@ span {
 }
 
 .skills-container {
-    height: 100vh;
+    height: auto;
     padding: 5em;
     background: url(./Zuri-images/line1.svg) no-repeat;
     background-position: 100% 29%;
@@ -340,4 +357,18 @@ footer {
 .copyright p a {
     text-decoration: none;
     color: var(--white);
+}
+
+
+@media screen and (max-width: 1200px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+        background: none;
+
+    }
+
+    .word-box {
+        text-align: center;
+    }
 }
