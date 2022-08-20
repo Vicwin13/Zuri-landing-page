@@ -2,7 +2,7 @@
     --blue: #007bff;
     --indigo: #6610f2;
     --purple: #6f42c1;
-    --pink: #e83e8c;
+    --pink: #f8e6e4;
     --red: #dc3545;
     --orange: #fd7e14;
     --yellow: #ffc107;
@@ -20,6 +20,7 @@
     --danger: #dc3545;
     --light: #f8f9fa;
     --dark: #343a40;
+    --background: rgb(255, 253, 245);
     --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
@@ -29,4 +30,240 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+body {
+    max-width: 90%;
+    margin: 0 auto;
+    font-family: Averta, sans-serif;
+    background-color: var(--background);
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: .5rem;
+    position: fixed;
+    width: 100%;
+    background-color: var(--background);
+    z-index: 1;
+}
+
+.logo img {
+    width: 23rem;
+
+}
+
+.logo {
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+}
+
+nav ul {
+    display: flex;
+    padding-right: 2rem;
+
+}
+
+nav ul li {
+    list-style: none;
+    padding-right: 1rem;
+    font-size: larger;
+    color: var(--gray-dark);
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--gray-dark);
+}
+
+.enroll {
+    display: flex;
+    align-items: center;
+    /* padding: .5rem; */
+    width: auto;
+
+
+}
+
+.enroll img {
+    width: 5rem;
+    /* border: 2px solid red; */
+    background-color: var(--danger);
+    border: 1rem solid var(--red);
+    border-radius: 50%;
+
+}
+
+.enroll p {
+    padding: 1rem;
+    background-color: var(--danger);
+    color: var(--white);
+    position: relative;
+    right: 13px;
+    font-weight: 400;
+    font-size: 1.2rem;
+    border-radius: 0px 38px 38px 0;
+}
+
+main {
+    display: flex;
+    height: 100vh;
+    justify-content: space-between;
+    align-items: center;
+    background: url(./Zuri-images/maleface.svg) no-repeat 30% 80%,
+        url(./Zuri-images/section1wire.svg) no-repeat 57% 95%;
+    background-size: 3.5rem, 6rem;
+}
+
+.main-text {
+    text-align: center;
+}
+
+.lady-image {
+    align-self: flex-end;
+    height: 30rem;
+}
+
+.male-image {
+    align-self: flex-end;
+    height: 30rem;
+}
+
+.main-text h1 {
+    text-align: center;
+    font-size: 2.95rem;
+    font-weight: 700;
+    line-height: 3rem;
+    font-family: Graphik !important;
+    align-self: flex-start;
+    padding: 0rem 0 3rem;
+    color: var(--dark);
+}
+
+.model {
+    width: 23em;
+    align-self: center;
+}
+
+.main-text p {
+
+    font-size: 1.3rem;
+    text-align: center;
+    color: var(--gray-dark);
+    padding-bottom: 2rem;
+}
+
+.main-text p:first-of-type {
+    color: var(--danger);
+    text-align: center;
+}
+
+.value-enroll {
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    border: none;
+    background-color: var(--danger);
+    color: var(--white);
+    font-size: larger;
+}
+
+.ingressive {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid rgba(128, 128, 128, .4);
+    border-bottom: 1px solid rgba(128, 128, 128, .4);
+    justify-content: space-between;
+}
+
+.ingressive-text h2 {
+    text-transform: uppercase;
+    width: 35rem;
+    font-size: 2rem;
+}
+
+.ingress-text2 {
+    text-align: right;
+    width: 30rem;
+    font-size: 1.8rem;
+}
+
+.ingress-text2 a {
+    color: var(--green);
+}
+
+.why-zuri {
+    padding-top: 8rem;
+}
+
+.why-zuri p:nth-child(1) {
+    color: var(--danger);
+    font-size: 1.5rem;
+}
+
+.why {
+    width: 14.5em;
+    font-size: 3rem;
+    color: var(--dark);
+    padding-bottom: 2em;
+}
+
+.placards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.cards {
+    padding: 3rem;
+    border-radius: 1rem;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: #fff;
+    color: var(--gray-dark);
+    position: relative;
+    box-shadow: 0px 11px 20px rgb(231 51 43 / 10%);
+
+}
+
+.cards:hover {
+    transform: translateY(-3%);
+    transition: transform 200ms ease;
+}
+
+.cards h1 {
+    font-size: 4em;
+}
+
+.cards h2 {
+    font-size: 2.2rem;
+    width: min-content;
+}
+
+.cards p {
+    font-size: 1.25rem;
+}
+
+.one {
+    background-color: var(--red);
+    color: white;
+    position: relative;
+
+
+}
+
+.cards img {
+    width: 8rem;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
