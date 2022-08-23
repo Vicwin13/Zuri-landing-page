@@ -117,10 +117,10 @@ nav ul li a {
 main {
     display: flex;
     height: 100vh;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    background: url(./Zuri-images/maleface.svg) no-repeat 30% 80%,
-        url(./Zuri-images/section1wire.svg) no-repeat 57% 95%;
+    background: url(./Zuri-images/maleface.svg) no-repeat 36% 84%,
+        url(./Zuri-images/section1wire.svg) no-repeat 57% 100%;
     background-size: 3.5rem, 6rem;
 }
 
@@ -128,19 +128,21 @@ main {
     text-align: center;
 }
 
-.lady-image {
+.lady-image img {
     align-self: flex-end;
-    height: 30rem;
+    width: 23rem;
+    align-self: flex-end;
+
 }
 
-.male-image {
+.male-image img {
     align-self: flex-end;
-    height: 30rem;
+    width: 23rem;
 }
 
 .main-text h1 {
     text-align: center;
-    font-size: 2.95rem;
+    font-size: 3rem;
     font-weight: 700;
     line-height: 3rem;
     font-family: Graphik !important;
@@ -149,10 +151,6 @@ main {
     color: var(--dark);
 }
 
-.model {
-    width: 23em;
-    align-self: center;
-}
 
 .main-text p {
 
@@ -555,6 +553,7 @@ div svg {
     padding: 4rem 2.5rem;
     border-radius: 5rem;
     box-shadow: 0px 8px 20px rgba(241, 27, 15, 0.2);
+    position: relative;
 }
 
 .fulltime p,
@@ -599,4 +598,82 @@ div svg {
 
 .last-ul li {
     line-height: 30px;
+}
+
+.clocks,
+.clocks1 {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+}
+
+.clocks img {
+    width: 8rem;
+}
+
+.clocks1 img {
+    width: 12rem;
+}
+
+.final-section {
+    margin-top: 5em;
+    color: white;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2rem;
+    background: url(./Zuri-images/round.svg) no-repeat, url(./Zuri-images/bend1.svg) no-repeat,
+        url(./Zuri-images/dotsection5.svg) no-repeat, url(./Zuri-images/curve2.svg) no-repeat;
+    background-position: 15% 20%, 103% 0%, 100% 100%, -3% 110%;
+    background-size: 10rem, auto, auto, auto;
+    background-color: var(--red);
+
+}
+
+.final-container {
+    text-align: center;
+
+
+}
+
+.final-container p {
+    font-size: larger;
+}
+
+.final-container h1 {
+    font-size: 3.5rem;
+    padding: 1rem;
+
+}
+
+
+
+.socials {
+    display: flex;
+    justify-content: space-between;
+    padding: 4rem 0 2rem;
+
+}
+
+.socials .social-links {
+    display: flex;
+    gap: .5rem;
+    margin-right: 1.5rem;
+}
+
+.copyright {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0;
+    font: 1.3rem;
+    letter-spacing: 1.5px;
+    color: var(--gray-dark);
+
+}
+
+.copyright ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
 }
