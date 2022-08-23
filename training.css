@@ -116,7 +116,7 @@ nav ul li a {
 
 main {
     display: flex;
-    height: 100vh;
+    height: 95vh;
     justify-content: space-around;
     align-items: center;
     background: url(./Zuri-images/maleface.svg) no-repeat 36% 84%,
@@ -292,7 +292,6 @@ main {
     justify-content: center;
     color: white;
     margin-top: 10em;
-
     padding: 0rem 2rem 7rem;
     background: url(./Zuri-images/section5wire.svg) no-repeat, url(./Zuri-images/dotsection5.svg) no-repeat;
     background-position: 25% 4%, 0% 98%;
@@ -303,7 +302,7 @@ main {
 }
 
 .section5-image img {
-    width: 40rem;
+    width: 45rem;
 }
 
 .section5-container {

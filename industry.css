@@ -2,7 +2,7 @@
     --blue: #007bff;
     --indigo: #6610f2;
     --purple: #6f42c1;
-    --pink: #f8e6e4;
+    --pink: #FFF8E5;
     --red: #dc3545;
     --orange: #fd7e14;
     --yellow: #FDE6B8;
@@ -31,7 +31,7 @@
 }
 
 body {
-    /* width: 85%; */
+
     margin: 0 auto;
     font-family: var(--font-family-sans-serif);
 }
@@ -39,19 +39,21 @@ body {
 nav {
     display: flex;
     justify-content: space-between;
-    padding: 1rem 7em 0;
     align-items: center;
     background-color: var(--white);
-    position: fixed;
+    position: sticky;
+    top: 0;
     width: 100%;
     margin: 0 auto;
+    z-index: 1;
+    padding: 0 5%;
 
 
 }
 
 .menu ul li {
     list-style: none;
-    padding: 1rem;
+    padding: 1.6rem;
 }
 
 .menu ul li:hover {
@@ -122,13 +124,19 @@ main {
     justify-content: space-around;
     align-items: center;
     height: 100vh;
-    background: url(./Zuri-images/line1.svg) no-repeat right fixed;
-    background-size: 12rem;
+
+
+}
+
+.word-box {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
 
 }
 
 .words p {
-    max-width: 30rem;
+    width: 30rem;
     padding-bottom: 1em;
     line-height: 1.7rem;
     font-size: 1.4rem;
@@ -153,8 +161,13 @@ span {
     color: var(--red);
 }
 
+.computer-man {
+    background: url(./Zuri-images/line1.svg) no-repeat right fixed;
+    background-size: 12rem;
+}
+
 .computer-man img {
-    max-width: 25rem;
+    max-width: 30rem;
 }
 
 .countries {
@@ -165,6 +178,11 @@ span {
     justify-content: space-around;
     background: url(./Zuri-images/bgsection2.png);
     background-size: cover;
+}
+
+.bleed {
+    box-shadow: 0 0 0 100vmax #FDF3F2;
+    clip-path: inset(0 -100vmax);
 }
 
 .people-network img {
@@ -231,8 +249,9 @@ span {
 .skills-container {
     height: auto;
     padding: 5em;
+    height: 100vh;
     background: url(./Zuri-images/line1.svg) no-repeat;
-    background-position: 100% 29%;
+    background-position: 80% 25%;
 }
 
 .skills-container h1:nth-child(1) {
@@ -253,7 +272,7 @@ span {
 
     display: flex;
     gap: 1rem;
-    flex-flow: row wrap;
+    flex-shrink: 2;
 }
 
 .skill-box-container div {
@@ -261,7 +280,7 @@ span {
     padding: 1rem 2rem;
     border-radius: 10px;
     box-shadow: 5px 5px 40px -12px var(--secondary);
-    font-size: larger;
+    font-size: large;
     color: var(--secondary);
 }
 
@@ -270,16 +289,24 @@ span {
     transition: transform .3s ease-in-out;
 }
 
+.main-three-container {
+
+    background: url(./Zuri-images/rope.svg) no-repeat;
+    background-position: 0% 50%;
+    background-size: 34%;
+    background-color: var(--pink);
+
+}
+
 .main-three {
     height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: url(./Zuri-images/rope.svg) no-repeat;
-    background-position: 0% 50%;
-    background-size: 34%;
+    max-width: 90%;
+    margin: 0 auto;
 
-    background-color: var(--yellow);
+
 }
 
 .main-three h1 {
@@ -293,6 +320,7 @@ span {
     flex-flow: row wrap;
     justify-content: center;
     gap: 2rem;
+    flex-grow: calc(100% - 50%);
 }
 
 .cards {
@@ -302,6 +330,10 @@ span {
     width: 22rem;
     height: auto;
     border-radius: 0 0 15px 0;
+    display: block;
+
+
+
 }
 
 .cards img {
@@ -365,10 +397,74 @@ footer {
         flex-direction: column;
         align-items: center;
         background: none;
+        justify-content: center;
+        padding-top: 10rem;
+        height: auto;
 
     }
 
     .word-box {
         text-align: center;
+        align-items: center;
+        padding-bottom: 4rem;
+    }
+
+    .words p {
+        width: 100%;
+    }
+
+
+
+    .computer-man img {
+        width: 35rem;
+    }
+
+
+
+
+}
+
+
+
+@media screen and (max-width: 1010px) {
+
+    .skills-container {
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .skills-container h1 {
+        text-align: center;
+    }
+
+    .skill-box-container {
+        flex-flow: row wrap;
+    }
+
+    .countries {
+        flex-flow: row wrap;
+        height: auto;
+        padding: 3rem;
+    }
+
+    .country-container {
+        text-align: center;
+    }
+
+    .menu ul {
+        visibility: hidden;
+    }
+}
+
+@media screen and (max-width: 837px) {
+    nav {
+        padding: 0;
+        justify-content: space-around;
+        padding: 1.5rem;
+        /* width: fit-content; */
+    }
+
+    .menu ul {
+        display: none;
     }
 }
