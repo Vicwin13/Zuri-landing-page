@@ -28,26 +28,30 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+
+
 }
 
 body {
-
-    margin: 0 auto;
+    width: auto;
+    margin: 0;
     font-family: var(--font-family-sans-serif);
+
 }
 
 nav {
     display: flex;
     justify-content: space-between;
+    padding: 0 6rem;
     align-items: center;
     background-color: var(--white);
-    position: sticky;
+    position: fixed;
     top: 0;
+    right: 0;
+    left: auto;
     width: 100%;
     margin: 0 auto;
-    z-index: 1;
-    padding: 0 5%;
-
+    z-index: 10;
 
 }
 
@@ -87,7 +91,7 @@ nav {
 .link a {
     text-decoration: none;
     color: var(--white);
-    font-size: larger;
+    font-size: 1rem;
 
 }
 
@@ -101,7 +105,7 @@ nav {
 .link2 a {
     text-decoration: none;
     color: var(--white);
-    font-size: larger;
+    font-size: 1rem;
 }
 
 .link2 {
@@ -116,6 +120,7 @@ nav {
     gap: 1rem;
     align-items: center;
     padding-top: 1em;
+    font-size: medium;
 
 }
 
@@ -152,10 +157,7 @@ main {
     background-size: 3.5em;
 }
 
-.words {
-    width: 40rem;
 
-}
 
 span {
     color: var(--red);
@@ -173,20 +175,21 @@ span {
 .countries {
     display: flex;
     align-items: center;
-
     height: 100vh;
     justify-content: space-around;
     background: url(./Zuri-images/bgsection2.png);
     background-size: cover;
+    padding: 0 4rem;
 }
 
-.bleed {
+/* .bleed {
     box-shadow: 0 0 0 100vmax #FDF3F2;
     clip-path: inset(0 -100vmax);
-}
+} */
 
 .people-network img {
     width: 28rem;
+
 }
 
 .country-container h1 {
@@ -248,17 +251,21 @@ span {
 
 .skills-container {
     height: auto;
-    padding: 5em;
+    padding: 6em;
     height: 100vh;
     background: url(./Zuri-images/line1.svg) no-repeat;
     background-position: 80% 25%;
+    text-align: left;
+
 }
 
-.skills-container h1:nth-child(1) {
+.skills-container h1 {
     font-size: 2.5rem;
     color: var(--gray-dark);
+    max-width: 28rem;
     padding-bottom: 2rem;
-    width: 33rem;
+    text-align: left;
+
 }
 
 .skills-container h1:nth-child(3) {
@@ -410,13 +417,14 @@ footer {
     }
 
     .words p {
-        width: 100%;
+        width: 50%;
+        margin: 0 auto;
     }
 
 
 
     .computer-man img {
-        width: 35rem;
+        width: 100%;
     }
 
 
@@ -427,6 +435,14 @@ footer {
 
 
 @media screen and (max-width: 1010px) {
+
+
+    nav {
+        justify-content: space-around;
+
+        padding: 1.5rem;
+
+    }
 
     .skills-container {
         height: auto;
@@ -444,15 +460,22 @@ footer {
     .countries {
         flex-flow: row wrap;
         height: auto;
-        padding: 3rem;
+        padding: 3rem 0;
     }
 
     .country-container {
         text-align: center;
+        font-size: small;
+        padding-bottom: 2rem;
+
+    }
+
+    .country-container h1 {
+        font-size: 2rem;
     }
 
     .menu ul {
-        visibility: hidden;
+        display: none;
     }
 }
 
@@ -461,10 +484,59 @@ footer {
         padding: 0;
         justify-content: space-around;
         padding: 1.5rem;
-        /* width: fit-content; */
+
     }
 
     .menu ul {
         display: none;
+    }
+}
+
+@media screen and (max-width: 650px) {
+
+
+    .skill-box-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .words {
+        margin: 0 auto;
+    }
+
+    .words h1 {
+        font-size: 2.3rem;
+    }
+
+    .words p {
+        width: 27rem;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+}
+
+@media screen and (max-width: 560px) {
+    body {
+        width: 100vmax;
+        margin: 0 auto;
+    }
+
+
+    .skills-container {
+
+        padding: 5rem 2rem;
+    }
+
+    .copyright {
+        flex-direction: column;
+    }
+
+    .link {
+        padding: .3rem 1.5rem;
+    }
+
+    .link2 {
+        padding: .3rem 1.5rem;
     }
 }
