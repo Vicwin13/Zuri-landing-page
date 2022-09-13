@@ -48,8 +48,10 @@ header {
     justify-content: space-around;
     align-items: center;
     padding: .5rem;
-    position: sticky;
+    position: fixed;
     top: 0;
+    right: 0;
+    left: auto;
     width: 100%;
     background-color: var(--background);
     z-index: 1;
@@ -122,23 +124,31 @@ main {
     background: url(./Zuri-images/maleface.svg) no-repeat 36% 84%,
         url(./Zuri-images/section1wire.svg) no-repeat 57% 100%;
     background-size: 3.5rem, 6rem;
-    margin-bottom: 3rem;
+    margin-bottom: 3em;
 }
 
 .main-text {
     text-align: center;
 }
 
+.lady-image {
+    width: 60%;
+}
+
 .lady-image img {
     align-self: flex-end;
-    width: 23rem;
     align-self: flex-end;
+    max-width: 100%;
 
+}
+
+.male-image {
+    width: 60%;
 }
 
 .male-image img {
     align-self: flex-end;
-    width: 23rem;
+    max-width: 100%;
 }
 
 .main-text h1 {
@@ -152,7 +162,7 @@ main {
     color: var(--dark);
     background: url(./Zuri-images/line.svg) no-repeat;
     background-position: 80% 85%;
-    background-size: 12rem;
+    background-size: 16rem;
 }
 
 
@@ -680,4 +690,31 @@ div svg {
     display: flex;
     list-style: none;
     gap: 2rem;
+}
+
+
+@media screen and (max-width: 1200px) {
+
+    main {
+        flex-direction: column;
+        height: auto;
+        align-content: center;
+        background-position: 0% 100%, 75% 100%;
+
+        /* padding: 4rem; */
+
+    }
+
+    .male-image {
+        display: none;
+    }
+
+    .lady-image {
+        width: 70%;
+    }
+
+    .value-enroll {
+        margin-top: 2rem;
+        margin-bottom: 6rem;
+    }
 }
