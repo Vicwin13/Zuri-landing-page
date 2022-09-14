@@ -35,10 +35,12 @@
 
 body {
     background-color: var(--background);
+    max-width: 100%;
+    border: 4px solid var(--teal);
 }
 
 .main-body {
-    width: 90%;
+    max-width: 95%;
     margin: 0 auto;
     font-family: Averta, sans-serif;
 }
@@ -48,18 +50,23 @@ header {
     justify-content: space-around;
     align-items: center;
     padding: .5rem;
-    position: fixed;
+    position: sticky;
     top: 0;
     right: 0;
-    left: auto;
+    left: 0;
     width: 100%;
     background-color: var(--background);
     z-index: 1;
+    overflow: hidden;
+
+}
+
+.logo {
+    width: 16rem;
 }
 
 .logo img {
-    width: 23rem;
-
+    max-width: 100%;
 }
 
 
@@ -295,6 +302,7 @@ main {
     box-shadow: 0 0 0 100vmax var(--red);
     clip-path: inset(0 -100vmax);
 
+
 }
 
 .inner {
@@ -309,15 +317,21 @@ main {
     background-color: var(--red);
     margin-top: 10em;
     margin-bottom: 10em;
+
+}
+
+.section5-image {
+    width: 40rem;
 }
 
 .section5-image img {
-    width: 45rem;
+    max-width: 100%;
 }
 
 .section5-container {
 
     padding: 3rem 0 0;
+
 }
 
 .text-five p {
@@ -329,7 +343,7 @@ main {
 }
 
 .text-five h1 {
-    font-size: 3.2em;
+    font-size: 3.5em;
     width: 40rem;
     padding: 2rem 0;
 
@@ -692,15 +706,28 @@ div svg {
     gap: 2rem;
 }
 
+.section-five {
+
+    max-width: 100%;
+}
 
 @media screen and (max-width: 1200px) {
+    .main-body {
+        border: 3px solid green;
+    }
+
+    header {
+
+        max-width: 100%;
+
+    }
 
     main {
         flex-direction: column;
         height: auto;
         align-content: center;
         background-position: 0% 100%, 75% 100%;
-
+        margin-top: 4rem;
         /* padding: 4rem; */
 
     }
@@ -717,4 +744,45 @@ div svg {
         margin-top: 2rem;
         margin-bottom: 6rem;
     }
+
+    .inner {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section5-image {
+        width: 80%;
+    }
+
+    /*
+    .text-five p {
+        font-size: large;
+    }*/
+
+    .section5-container {
+        border: 3px solid darkblue;
+        width: 90%;
+
+    }
+
+    .text-five h1 {
+        font-size: 2.6rem;
+        width: 80%;
+    }
+
+
+    .another-section {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+    }
+
+    .all {
+        max-width: 13rem;
+        padding: .3rem;
+    }
+
+
+
+
+
 }
