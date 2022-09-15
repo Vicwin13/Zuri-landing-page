@@ -293,6 +293,10 @@ div[last] {
         margin-top: 1em;
     }
 
+    .landing-text {
+        margin-top: 3rem;
+    }
+
     .landing-text p {
         width: 80%;
         margin: 0 auto;
