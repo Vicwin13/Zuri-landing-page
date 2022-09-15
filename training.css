@@ -40,7 +40,7 @@ body {
 }
 
 .main-body {
-    max-width: 95%;
+    max-width: 90%;
     margin: 0 auto;
     font-family: Averta, sans-serif;
 }
@@ -206,13 +206,14 @@ main {
 
 .ingressive-text h2 {
     text-transform: uppercase;
-    width: 30rem;
+    max-width: 30rem;
     font-size: 1.6rem;
+    color: var(--black);
 }
 
 .ingress-text2 {
     text-align: right;
-    width: 25rem;
+    max-width: 25rem;
     font-size: 1.5rem;
 }
 
@@ -224,7 +225,8 @@ main {
     padding-top: 8rem;
     background: url(./Zuri-images/section3wire.svg) no-repeat,
         url(./Zuri-images/Star.jpg) no-repeat;
-    background-position: 25% 0%, 80% 8%;
+    background-position: 30% 2%, 95% 8%;
+    background-size: 6em, 13rem;
 }
 
 .why-zuri p:nth-child(1) {
@@ -293,7 +295,7 @@ main {
 }
 
 .ingressive-logo img {
-    width: calc(100% - 40%);
+    width: calc(100% - 2%);
 }
 
 
@@ -312,7 +314,7 @@ main {
     margin-top: 10em;
     padding: 0rem 2rem 7rem;
     background: url(./Zuri-images/section5wire.svg) no-repeat, url(./Zuri-images/dotsection5.svg) no-repeat;
-    background-position: 25% 4%, 0% 98%;
+    background-position: 45% 0%, 0% 98%;
     background-size: 5em, 7em;
     background-color: var(--red);
     margin-top: 10em;
@@ -754,20 +756,11 @@ div svg {
         width: 80%;
     }
 
-    /*
-    .text-five p {
-        font-size: large;
-    }*/
-
-    .section5-container {
-        border: 3px solid darkblue;
-        width: 90%;
-
-    }
 
     .text-five h1 {
-        font-size: 2.6rem;
-        width: 80%;
+        font-size: 2rem;
+        width: 100%;
+        padding-top: 0;
     }
 
 
@@ -781,8 +774,32 @@ div svg {
         padding: .3rem;
     }
 
+    .text-five p:last-of-type {
+        width: 90%;
+        font-size: 1rem;
+    }
 
+    .placards {
+        grid-template-columns: repeat(2, 1fr);
+        flex-flow: row wrap;
+    }
 
+    .stack-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
+    .ingressive-text h2 {
+        font-size: 1.2rem;
 
+    }
+
+    .ingress-text2 {
+        font-size: 1.2rem;
+    }
+
+    .why {
+        width: 15em;
+        font-size: 2rem;
+        padding-bottom: 4em;
+    }
 }
