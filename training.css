@@ -35,7 +35,7 @@
 
 body {
     background-color: var(--background);
-    max-width: 100%;
+
 
 }
 
@@ -43,6 +43,7 @@ body {
     max-width: 90%;
     margin: 0 auto;
     font-family: Averta, sans-serif;
+    overflow: hidden;
 }
 
 header {
@@ -55,8 +56,8 @@ header {
     right: 0;
     left: 0;
     width: 100%;
-    /* background-color: var(--background); */
-    background-color: #17a2b8;
+    background-color: var(--background);
+    box-shadow: 0 3px 3px rgba(0, 0, 0, .1);
     z-index: 1;
     overflow: hidden;
 
@@ -208,11 +209,12 @@ main {
     flex-grow: 1.5;
 }
 
-.ingressive-text h2 {
+.ingressive-text {
     text-transform: uppercase;
     width: 27rem;
     font-size: 1.6rem;
     color: var(--black);
+
 }
 
 .ingress-text2 {
@@ -247,7 +249,8 @@ main {
 
 .placards {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-columns: repeat(3, 1fr); */
+    grid-template-columns: repeat(auto-fill, minmaX(20rem, 1fr));
     gap: 2rem;
 }
 
@@ -304,12 +307,6 @@ main {
 
 
 
-.bleed {
-    box-shadow: 0 0 0 100vmax var(--red);
-    clip-path: inset(0 -100vmax);
-
-
-}
 
 .inner {
     display: flex;
@@ -322,7 +319,8 @@ main {
     background-size: 5em, 7em;
     background-color: var(--red);
     margin-bottom: 10em;
-    border: 3px solid teal;
+    overflow: unset;
+
     /* margin: 0 auto; */
 
 }
@@ -339,7 +337,8 @@ main {
 .section5-container {
 
     padding: 3rem 0 0;
-    border: 3px solid greenyellow;
+
+    width: inherit;
 
 }
 
@@ -359,14 +358,24 @@ main {
 }
 
 .another-section {
-    display: grid;
+    /* display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     gap: 1.5rem;
     justify-content: start;
-    width: fit-content;
+    width: fit-content; */
+    display: flex;
 
+    flex-direction: column;
+    gap: .5rem;
 
+}
+
+[first-flex],
+[second-flex] {
+
+    display: flex;
+    gap: .4rem;
 }
 
 .all {
@@ -412,7 +421,8 @@ main {
 
 .stack-cards {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-columns: repeat(3, 1fr); */
+    grid-template-columns: repeat(auto-fill, minmaX(20rem, 1fr));
     gap: 2rem;
 }
 
@@ -514,6 +524,20 @@ input.value-enroll-two {
     display: none;
 }
 
+.show {
+    display: block;
+    transform: translateY(10%);
+    transition: display 3s ease-in-out forwards;
+}
+
+.spin {
+    transform: rotateZ(360deg);
+
+    transition: all 1s ease-in;
+    transform-style: flat;
+    transform-origin: left;
+}
+
 .plus {
     padding-right: 1rem;
     font-size: calc(100% + 80%);
@@ -577,10 +601,10 @@ div svg {
     display: flex;
     justify-content: center;
     padding-top: 3em;
-    flex-shrink: 1.5;
+    flex-shrink: 1;
     gap: 1rem;
     margin: 0 auto;
-    width: 90%;
+    width: 100%;
 }
 
 .fulltime {
@@ -599,7 +623,7 @@ div svg {
 
 
 .part-time {
-    width: min-content;
+    min-width: min-content;
     background-image: url(./Zuri-images/time.png);
     background-repeat: no-repeat;
     background-size: 12rem;
@@ -734,15 +758,9 @@ div svg {
     gap: 2rem;
 }
 
-.section-five {
-
-    max-width: 100%;
-}
 
 @media screen and (max-width: 1200px) {
-    .main-body {
-        border: 3px solid green;
-    }
+
 
     header {
 
@@ -790,10 +808,10 @@ div svg {
     }
 
 
-    .another-section {
+    /* .another-section {
         grid-template-columns: repeat(4, 1fr);
         gap: 1.5rem;
-    }
+    } */
 
     .all {
         max-width: 13rem;
@@ -832,6 +850,13 @@ div svg {
     }
 }
 
+@media screen and (max-width: 1000px) {
+    .time-frame {
+        flex-wrap: wrap;
+    }
+
+}
+
 @media screen and (max-width:900px) {
 
     nav ul {
@@ -840,6 +865,51 @@ div svg {
 
     .ingressive {
         flex-direction: column;
+        align-content: center;
+        align-self: center;
+        justify-content: center;
+        gap: 2rem;
+
     }
 
+    .ingressive-text,
+    .ingress-text2 {
+        width: fit-content;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .ingressive-logo {
+
+        display: flex;
+        justify-content: center;
+
+    }
+
+
+}
+
+@media screen and (max-width: 756px) {
+
+    .why-zuri {
+        background: none;
+    }
+
+    .placards,
+    .stack-cards {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media screen and (max-width: 650px) {
+
+    .socials {
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    .socials :nth-child() {
+        border: 3px solid red;
+    }
 }

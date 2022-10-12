@@ -33,6 +33,7 @@
 
 main {
     min-height: auto;
+    overflow: hidden;
 }
 
 section.landing-container {
@@ -56,6 +57,7 @@ div.other-links {
     justify-content: center;
     gap: 2rem;
     padding-top: 6rem;
+
 }
 
 .landing-text p span {
@@ -110,14 +112,18 @@ section[second] {
     padding-top: 5em;
     background: url("./Zuri-images/left_bvmv7q.png") left no-repeat, url("./Zuri-images/left_bvmv7q.png") right no-repeat;
     background-size: 22em, 22em;
+    margin-top: 8rem;
 }
 
 div.box-container {
     display: flex;
     width: 100%;
-    justify-content: center;
+    justify-content: space-around;
+    padding: 0 2rem;
     gap: 3rem;
-    align-items: center;
+    align-items: top;
+
+    margin-bottom: 10rem;
 
 }
 
@@ -126,10 +132,10 @@ div.box-container .boxes {
     flex-direction: column;
     justify-content: space-between;
     background-color: #FFFAFA;
-    width: 23em;
+    width: fit-content;
     text-align: left;
     padding: 1.5em;
-    height: max-content;
+    min-height: 28em;
 
 }
 
@@ -154,6 +160,7 @@ div.box-container .boxes a {
 footer section {
     display: flex;
     justify-content: space-around;
+    /* margin-top: 3em; */
 }
 
 div.link {
@@ -171,7 +178,7 @@ p[bottom-text] {
 }
 
 footer {
-    height: 50vh;
+    height: auto;
     margin-top: 5em;
 
 
@@ -228,6 +235,11 @@ p[mail] {
     padding-top: 10px;
 }
 
+.last-line {
+
+    opacity: .3;
+}
+
 div[last] {
     text-align: center;
     color: var(--gray-dark);
@@ -241,7 +253,7 @@ div[last] {
 
 @media screen and (max-width: 970px) {
 
-    main .landing-container {
+    main.landing-container {
         height: 100vh;
         display: block;
     }
@@ -275,10 +287,20 @@ div[last] {
 
 @media screen and (max-width: 768px) {
 
+    section.landing-container {
+        padding-top: 1.5rem;
+        height: 100vh;
+    }
+
+    section[second] {
+        margin-top: 0rem;
+    }
+
+
     footer section {
         flex-direction: column;
         align-items: center;
-        gap: 2em;
+        gap: 1em;
         text-align: center;
         height: auto;
 
@@ -287,6 +309,7 @@ div[last] {
     div.other-links {
         flex-direction: column;
         gap: 2em;
+
     }
 
     div.other-links .link2 {
@@ -307,10 +330,32 @@ div[last] {
     }
 }
 
-@media screen and (max-width: 375) {
+@media screen and (max-width: 375px) {
     main {
         width: 100%;
+
     }
 
+
+
+    div.box-container {
+
+        padding: 0;
+    }
+
+    div.box-container .boxes {
+        padding: 0;
+
+        width: inherit;
+    }
+
+    footer section {
+
+        height: 80vh;
+    }
+
+    p[bottom-text] {
+        font-size: medium;
+    }
 
 }
