@@ -1,11 +1,20 @@
 let plus = document.querySelectorAll(".plus");
 let answers = document.querySelectorAll(".answers");
-let reply = [];
 
-// plus.forEach((button) => {
-//   button.addEventListener("click", reply);
-// });
+// function work() {
+//       for (let i of answers) {
+//         i.classList.toggle("show");
 
-let results = new Map(answers);
+//   answers[i].classList.toggle("show");
+//   console.log(answers[i]);
 
-console.log(results.values);
+//       }
+// }
+
+plus.forEach((item) => {
+  item.addEventListener("click", () => {
+    answers.forEach((i) => {
+      i.classList.toggle("show");
+    });
+  });
+});

@@ -64,11 +64,11 @@ header {
 }
 
 .logo {
-    width: 16rem;
+    width: minmax(2rem, 16rem);
 }
 
 .logo img {
-    max-width: 100%;
+    width: 100%;
 }
 
 
@@ -121,7 +121,6 @@ nav ul li a {
     color: var(--white);
     position: relative;
     right: 15px;
-    font-weight: 400;
     font-size: 1.2rem;
     border-radius: 0px 38px 38px 0;
 }
@@ -476,7 +475,7 @@ input.value-enroll-two {
 
 .faq-section {
     text-align: center;
-    padding: 10em 0 5em;
+    padding: 10em 0 2em;
     background: url(./Zuri-images/section7wire.svg) no-repeat;
     background-size: 10em;
     background-position: 10% 5%;
@@ -510,6 +509,7 @@ input.value-enroll-two {
     width: 75%;
     margin: 0 auto;
     color: var(--gray-dark);
+    position: relative;
 
 }
 
@@ -518,16 +518,19 @@ input.value-enroll-two {
     font-size: 20px;
 }
 
-.que p {
+.answers {
     padding: 1rem 0;
     font-weight: 500;
     display: none;
+    transform: translateY(0%);
+    transition: all 2s ease-in-out;
 }
 
 .show {
     display: block;
+
     transform: translateY(10%);
-    transition: display 3s ease-in-out forwards;
+    transition: all 5s ease-in-out forwards;
 }
 
 .spin {
@@ -543,6 +546,8 @@ input.value-enroll-two {
     font-size: calc(100% + 80%);
     font-weight: 600;
     cursor: pointer;
+    position: absolute;
+    right: 0;
 }
 
 .more-que {
@@ -899,6 +904,16 @@ div svg {
     .stack-cards {
         grid-template-columns: repeat(1, 1fr);
     }
+
+    .section-six h2 {
+        width: 100%;
+        font-size: 1.8rem;
+        line-height: normal;
+    }
+
+    .section5-image {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 650px) {
@@ -911,5 +926,120 @@ div svg {
 
     .socials :nth-child() {
         border: 3px solid red;
+    }
+
+    .que {
+        width: 100%;
+    }
+
+    .final-section {
+        height: 50vh;
+        background-size: 3rem, 6rem, 4rem, 6rem;
+    }
+
+    .final-container h1 {
+        font-size: 1.5rem;
+    }
+
+    .socials .social-links {
+        margin: 0;
+    }
+
+    .copyright {
+        flex-direction: column;
+
+        align-items: center;
+
+    }
+
+
+}
+
+@media screen and (max-width: 520px) {
+
+    .time-frame {
+        padding: 0 .1rem;
+    }
+
+    .fulltime {
+        width: 100%;
+        padding: 2rem .5rem;
+    }
+
+    .part-time {
+        width: 100%;
+        padding: 2rem .5rem;
+
+        background-size: 9rem;
+    }
+
+    .fulltime p,
+    .part-time p {
+        font-weight: 300;
+        font-size: 1rem;
+    }
+
+    .main-text h1 {
+        font-size: 2rem;
+        line-height: normal;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+
+    [first-flex],
+    [second-flex] {
+        flex-direction: column;
+
+        margin: 0 auto;
+    }
+
+    .faq-section {
+        background: none;
+    }
+
+    .logo img {
+        max-width: 7rem;
+    }
+
+    .enroll img {
+        max-width: 3.4rem;
+    }
+
+    .enroll p {
+        padding: .3rem;
+        font-size: 1rem;
+        right: 7px;
+        top: -1px;
+    }
+
+    .faq-section div[divFaq] h2 {
+        font-size: 1.2rem;
+    }
+
+    .faq-section div[divFaq] {
+        padding-bottom: 2rem;
+    }
+
+    .structure {
+        background: none;
+    }
+
+    .fulltime p:nth-child(2),
+    .part-time p:nth-child(2) {
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+    .more-que {
+        flex-direction: column;
+    }
+
+    .copyright ul {
+        flex-direction: column;
+        align-items: center;
     }
 }
