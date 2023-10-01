@@ -11,6 +11,8 @@ let answers = document.querySelectorAll(".answers");
 //       }
 // }
 
+// a forEach loop
+
 plus.forEach((item) => {
   item.addEventListener("click", () => {
     answers.forEach((i) => {
